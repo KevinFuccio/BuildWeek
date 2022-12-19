@@ -8,7 +8,8 @@ body{
     width: 15%;
     padding: 15px 0px 0px 15px;
 }
-.generalButton{
+.buttons{
+    display: inline-block;
     font-weight: bold;
     background-color: #bf055b;
     color: #fff;
@@ -18,7 +19,8 @@ body{
     font-size: 32px;
     min-width: 320px;
 }
-.generalButton:hover{
+.buttons:hover{
+    display: inline-block;
     font-weight: bold;
     background-color: #00e5ff;
     color: rgb(0, 31, 81);
@@ -28,4 +30,22 @@ body{
     font-size: 32px;
     min-width: 320px;
     box-shadow: 0px 0px 24px aqua
+}
+.title{
+    box-sizing: border-box;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+}
+.title h1{
+    font-size: 60px;
+    color: white;
+    text-align: center;
+}
+.mainArgument{
+    box-sizing: border-box;
+    width: 80%;
+    margin-left: auto;
+    margin-top: 50px;
 }
