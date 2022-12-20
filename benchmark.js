@@ -9,9 +9,6 @@ let timer = function(){
     }
 }
 setInterval(timer,1000);
-
-let punteggioQuiz = 0
-
 //Button when an answer is clicked
 let nextButton = function(){
     let selector = document.querySelector("#buttonGo")
@@ -131,18 +128,30 @@ const questions = [
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
 ];
+let answerButtons = function(){
+  let main = document.querySelector("#mainArgument")
+  let buttons = document.createElement("button")
+  buttons.textContent = domandeTot
+  buttons.classList = "buttons"
+  main.appendChild(buttons)
+}
 //Text inside H1 and Buttons
 let score = 0
 let cycleQuiz = function(){
   quizCounter() 
-for (let i = 0; i < questions.length; i++) {
-  const response = questions[i].question;
-  if(response == questions[i].correct_answer){
-  score++
-}else{
- 
-}}}
+  let domanda = document.querySelector("h1").innerHTML = questions[score++].question
+  
 
+    for (let i = 0; i < questions.length; i++) {
+      let response = questions[i].question
+      if(response == questions[i].correct_answer){
+        score++
+      }else{
+        
+      }
+    }
+  }
+ 
 cycleQuiz()
 
   
