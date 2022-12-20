@@ -52,6 +52,7 @@
   #nextButton{
     cursor: pointer;
     float: right;
+    margin-right:15%;
     font-weight: bold;
     color: white;
     background-color: #d20094;

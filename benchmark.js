@@ -1,13 +1,15 @@
 //TIMER
 let counter = 10
 let timer = function(){
-    if(counter > 0){
-        document.querySelector("#timer").innerHTML = counter 
+    if(counter >= 0){
+        document.querySelector("#timer").innerHTML = counter--
     }else if(counter <= 0){
-        document.querySelector("#timer").innerHTML = "Il tempo è scaduto"
+      quizCounter()
+      counter = 10
     }
     
-    counter -= 1;
+    // counter -= 1;
+    
 }
 setInterval(timer,1000);
 
@@ -21,15 +23,26 @@ let nextButton = function(){
     button.textContent = "NEXT"
     selector.appendChild(button)
     button.onclick = quizCounter
+    nextButton = () => {}
+  }
+
+   
+  
 
     
-};
+
 //Counter for the quitz
 let quizCount = 1
 let quizCounter = function(){
-    document.querySelector("#questions").innerHTML = quizCount
+   document.querySelector("#questions").innerHTML = quizCount++
+    if(quizCount >= 10){
+      quizCount = 10
+    }
     
 };
+let buttonsB = document.querySelectorAll(".buttons").innerHTML
+buttonsB = questions
+
 
 
 const questions = [
