@@ -1,0 +1,35 @@
+
+
+
+.header h1{
+    color: white;
+    text-align: center;
+    font-size: 2.8rem;
+   
+}
+.header p{
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+}
+
+  .mainArgument div {
+    display: inline-block;
+    padding: 50px;
+  }
+  .mainArgument div h1{
+    color: white;
+    padding: 5px;
+    margin: 250px;
+  }
+
+  .btn{
+    width: 20%;
+    text-align: center;
+    padding: 15px;
+    background: transparent;
+    color: white;
+    margin: auto;
+    border: 1px solid white;
+    cursor: pointer;
+  }
