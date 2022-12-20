@@ -1,9 +1,10 @@
+
 #timer{
-    display: inline-block;
     color: white;
     font-size: 24px;
     text-align: right;
     margin-right: 50px;
+    height: 30px;
   }
   .buttons {
     display: inline-block;
@@ -19,6 +20,7 @@
     border: none;
   }
   .buttons:hover {
+    cursor: pointer;
     transition-delay: 50ms;
     display: inline-block;
     border: none;
@@ -42,6 +44,40 @@
     box-shadow: 0px 0px 10px #D20094;
     vertical-align: top;
     border-radius: 52px;
+    outline: none;
+  }
+  #buttonGo{
+    height: 63px;
+  }
+  #nextButton{
+    cursor: pointer;
+    float: right;
+    font-weight: bold;
+    color: white;
+    background-color: #d20094;
+    border: none;
+    padding: 15px;
+    min-height: 62px;
+    font-size: 16px;
+    min-width: 130px;
+    /* box-shadow: 0px 0px 10px #00d3ff; */
+    vertical-align: top;
+    /* border-radius: 52px; */
+    outline: none;
+  }
+  #nextButton:hover{
+    float: right;
+    font-weight: bold;
+    color: white;
+    background-color: #d20094;
+    border: none;
+    padding: 15px;
+    min-height: 62px;
+    font-size: 16px;
+    min-width: 130px;
+    /* box-shadow: 0px 0px 10px #00d3ff; */
+    vertical-align: top;
+    /* border-radius: 52px; */
     outline: none;
   }
   .title {
