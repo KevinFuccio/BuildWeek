@@ -30,6 +30,7 @@
     background: transparent;
     color: white;
     margin: auto;
+    margin-bottom: 75px;
     border: 1px solid white;
     cursor: pointer;
   }
