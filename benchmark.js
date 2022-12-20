@@ -19,11 +19,11 @@ let nextButton = function(){
     button.id = "nextButton"
     button.textContent = "NEXT"
     selector.appendChild(button)
-    button.onclick = quizCounter
+    button.onclick =  cycleQuiz
     nextButton = () => {}
   }
 //Counter for the quitz
-let quizCount = 1
+let quizCount = 0
 let quizCounter = function(){
    document.querySelector("#questions").innerHTML = quizCount++
     if(quizCount >= 10){
@@ -132,20 +132,22 @@ const questions = [
   },
 ];
 //Text inside H1 and Buttons
+let domanda = 0
 let cycleQuiz = function(){
+  quizCounter()
   // for (let i = 0; i < questions.length; i++) {
   //   const element = questions[i].question;
-  //   let title = document.querySelector("h1").innerHTML = element
   //   if(quizCount < questions.length){
-  //     counter++
-  //   }
-  if(quizCount < questions.length){
-    counter++
-  }
-    
+    //     counter++
+  document.querySelector("h1").innerHTML = questions[domanda++].question
+ let bottoni = document.querySelectorAll(".buttons").innerHTML  
+ bottoni.forEach(button => {
+  button.textContent = questions[domanda++].correct_answer
+ });
+}
+cycleQuiz()
 
-
-  }
+  
 
 
 
