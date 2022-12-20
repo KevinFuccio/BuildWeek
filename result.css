@@ -13,17 +13,10 @@
     font-size: 1rem;
 }
 
-  .mainArgument div {
-    display: inline-block;
-    padding: 50px;
-  }
-  .mainArgument div h1{
-    color: white;
-    padding: 5px;
-    margin: 250px;
-  }
+
 
   .btn{
+    
     width: 20%;
     text-align: center;
     padding: 15px;
