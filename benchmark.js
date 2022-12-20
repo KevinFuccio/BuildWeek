@@ -132,19 +132,17 @@ const questions = [
   },
 ];
 //Text inside H1 and Buttons
-let domanda = 0
+let score = 0
 let cycleQuiz = function(){
-  quizCounter()
-  // for (let i = 0; i < questions.length; i++) {
-  //   const element = questions[i].question;
-  //   if(quizCount < questions.length){
-    //     counter++
-  document.querySelector("h1").innerHTML = questions[domanda++].question
- let bottoni = document.querySelectorAll(".buttons").innerHTML  
- bottoni.forEach(button => {
-  button.textContent = questions[domanda++].correct_answer
- });
-}
+  quizCounter() 
+for (let i = 0; i < questions.length; i++) {
+  const response = questions[i].question;
+  if(response == questions[i].correct_answer){
+  score++
+}else{
+ 
+}}}
+
 cycleQuiz()
 
   
