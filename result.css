@@ -1,6 +1,4 @@
 
-
-
 .header h1{
     color: white;
     text-align: center;
@@ -14,8 +12,7 @@
 }
 
 
-
-  .btn{
+.btn{
     
     width: 20%;
     text-align: center;
@@ -26,8 +23,9 @@
     margin-bottom: 75px;
     border: 1px solid white;
     cursor: pointer;
+    box-shadow: 1px 1px 10px lightblue;
   }
-  circle{
+circle{
     fill: transparent;
     stroke:#00ffff;
     stroke-width: 45;
