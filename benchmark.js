@@ -31,7 +31,7 @@ function buttonCreate (){
   button.addEventListener("click", nextButton, {once:true})
   questionButtons.appendChild(button)
 }
-buttonCreate()
+
 
 const questions = [
   {
@@ -134,13 +134,33 @@ const questions = [
 ];
 let questionElement = document.getElementById("title")
 questionElement.id = "title"
+let questionsNewArr = []
+for (let i = 0; i < questions.length; i++) {
+  const elementC = questions[i].correct_answer;
+  const arr = new Array(elementC)
+  const elementW = questions[i].incorrect_answers
+  let push = arr.concat(elementW)
+  questionsNewArr.push(push)
+}
+console.log(questionsNewArr);
 
-// let questionsNewArr = questions[newArr++].correct_answer
+function resetAnswer(){
+  
+}
+
 // Text inside H1 and Buttons
 let nArray = 0
 let cycleQuiz = function(){
  questionElement.innerHTML = questions[nArray++].question
-  
+ questionsNewArr[nArray++].forEach(element => {
+  let btn = document.createElement("button")
+  btn.innerText = element
+  btn.classList.add("buttons")
+  btn.addEventListener("click", nextButton, {once:true})
+  questionButtons.appendChild(btn)
+
+ });
+ 
   
 }
   cycleQuiz()
