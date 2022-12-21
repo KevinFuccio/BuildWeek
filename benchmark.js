@@ -1,3 +1,5 @@
+const questionElement = document.getElementById("title");
+questionElement.id = "title";
 let questionButtons = document.getElementById("mainArgument");
 
 //Button when an answer is clicked
@@ -22,6 +24,7 @@ let quizCounter = function () {
   document.querySelector("#questions").innerHTML = quizCount++;
   if (quizCount >= 10) {
     quizCount = 10;
+    lastAnswer()
   }
 };
 quizCounter();
@@ -120,8 +123,8 @@ const questions = [
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
 ];
-const questionElement = document.getElementById("title");
-questionElement.id = "title";
+
+
 let questionsNewArr = [];
 for (let i = 0; i < questions.length; i++) {
   const elementC = questions[i].correct_answer;
@@ -152,3 +155,7 @@ let cycleQuiz = function () {
   questionButtons.addEventListener("click", nextButton, { once: true });
 };
 cycleQuiz();
+function lastAnswer(){
+ questionElement.innerHTML = "FINITO"
+ 
+}
