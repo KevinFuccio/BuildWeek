@@ -1,4 +1,5 @@
 let questionButtons = document.getElementById("mainArgument")
+
 //Button when an answer is clicked
 let nextButton = function(){
     let selector = document.querySelector("#buttonGo")
@@ -153,18 +154,14 @@ let nArray = 0
 let cycleQuiz = function(){
  questionElement.innerHTML = questions[nArray++].question
  questionsNewArr[nArray++].forEach(element => {
-  let btn = document.createElement("button")
+   btn = document.createElement("button")
   btn.innerText = element
   btn.classList.add("buttons")
-  btn.addEventListener("click", nextButton, {once:true})
   questionButtons.appendChild(btn)
-
- });
- 
-  
+});
+questionButtons.addEventListener("click", nextButton,{once:true})
 }
   cycleQuiz()
- 
 
 
   
