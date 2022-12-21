@@ -1,14 +1,4 @@
-//TIMER
-let counter = 10
-let timer = function(){
-    if(counter >= 0){
-        document.querySelector("#timer").innerHTML = counter--
-    }else if(counter <= 0){
-      quizCounter()
-      counter = 10
-    }
-}
-setInterval(timer,1000);
+let questionButtons = document.getElementById("mainArgument")
 //Button when an answer is clicked
 let nextButton = function(){
     let selector = document.querySelector("#buttonGo")
@@ -16,11 +6,18 @@ let nextButton = function(){
     button.id = "nextButton"
     button.textContent = "NEXT"
     selector.appendChild(button)
-    button.onclick =  cycleQuiz
+    button.addEventListener('click',countAndAnswer)
     nextButton = () => {}
-  }
+}
+function countAndAnswer(){
+quizCounter()
+cycleQuiz()
+}
+
+
+
 //Counter for the quitz
-let quizCount = 0
+let quizCount = 1
 let quizCounter = function(){
    document.querySelector("#questions").innerHTML = quizCount++
     if(quizCount >= 10){
@@ -28,6 +25,13 @@ let quizCounter = function(){
     }
 };
 quizCounter()
+function buttonCreate (){
+  let button = document.createElement("button")
+  button.classList.add("buttons")
+  button.addEventListener("click", nextButton, {once:true})
+  questionButtons.appendChild(button)
+}
+buttonCreate()
 
 const questions = [
   {
@@ -128,31 +132,20 @@ const questions = [
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
 ];
-let answerButtons = function(){
-  let main = document.querySelector("#mainArgument")
-  let buttons = document.createElement("button")
-  buttons.textContent = domandeTot
-  buttons.classList = "buttons"
-  main.appendChild(buttons)
-}
-//Text inside H1 and Buttons
-let score = 0
-let cycleQuiz = function(){
-  quizCounter() 
-  let domanda = document.querySelector("h1").innerHTML = questions[score++].question
-  
+let questionElement = document.getElementById("title")
+questionElement.id = "title"
 
-    for (let i = 0; i < questions.length; i++) {
-      let response = questions[i].question
-      if(response == questions[i].correct_answer){
-        score++
-      }else{
-        
-      }
-    }
-  }
+// let questionsNewArr = questions[newArr++].correct_answer
+// Text inside H1 and Buttons
+let nArray = 0
+let cycleQuiz = function(){
+ questionElement.innerHTML = questions[nArray++].question
+  
+  
+}
+  cycleQuiz()
  
-cycleQuiz()
+
 
   
 

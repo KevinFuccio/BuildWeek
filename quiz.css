@@ -1,11 +1,13 @@
-
-#timer{
+* , *::before, *::after{
+  box-sizing: border-box;
+}
+/* #timer{
     color: white;
     font-size: 24px;
     text-align: right;
     margin-right: 50px;
     height: 30px;
-  }
+  } */
   .buttons {
     display: inline-block;
     font-weight: bold;
@@ -49,6 +51,7 @@
   }
   #buttonGo{
     height: 63px;
+    
   }
   #nextButton{
     cursor: pointer;
@@ -84,9 +87,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
-  }
-  #title h1 {
-      font-weight: normal;
+    font-weight: normal;
     font-size: 60px;
     color: white;
     text-align: center;
@@ -108,3 +109,4 @@
       color: #fff;
       margin-top: 50px;
   }
+  
