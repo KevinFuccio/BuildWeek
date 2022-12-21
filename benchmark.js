@@ -1,39 +1,30 @@
-let questionButtons = document.getElementById("mainArgument")
+let questionButtons = document.getElementById("mainArgument");
 
 //Button when an answer is clicked
-let nextButton = function(){
-    let selector = document.querySelector("#buttonGo")
-    let button = document.createElement("button")
-    button.id = "nextButton"
-    button.textContent = "NEXT"
-    selector.appendChild(button)
-    button.addEventListener('click',countAndAnswer)
-    nextButton = () => {}
+let nextButton = function () {
+  let selector = document.querySelector("#buttonGo");
+  let button = document.createElement("button");
+  button.id = "nextButton";
+  button.textContent = "NEXT";
+  selector.appendChild(button);
+  button.addEventListener("click", countAndAnswer);
+  nextButton = () => {};
+};
+function countAndAnswer() {
+  resetAnswer();
+  quizCounter();
+  cycleQuiz();
 }
-function countAndAnswer(){
-quizCounter()
-cycleQuiz()
-}
-
-
 
 //Counter for the quitz
-let quizCount = 1
-let quizCounter = function(){
-   document.querySelector("#questions").innerHTML = quizCount++
-    if(quizCount >= 10){
-      quizCount = 10
-    }
+let quizCount = 1;
+let quizCounter = function () {
+  document.querySelector("#questions").innerHTML = quizCount++;
+  if (quizCount >= 10) {
+    quizCount = 10;
+  }
 };
-quizCounter()
-function buttonCreate (){
-  let button = document.createElement("button")
-  button.classList.add("buttons")
-  button.addEventListener("click", nextButton, {once:true})
-  questionButtons.appendChild(button)
-}
-
-
+quizCounter();
 const questions = [
   {
     category: "Science: Computers",
@@ -101,11 +92,7 @@ const questions = [
     question:
       "What is the code name for the mobile operating system Android 7.0?",
     correct_answer: "Nougat",
-    incorrect_answers: [
-      "Ice Cream Sandwich",
-      "Jelly Bean",
-      "Marshmallow",
-    ],
+    incorrect_answers: ["Ice Cream Sandwich", "Jelly Bean", "Marshmallow"],
   },
   {
     category: "Science: Computers",
@@ -133,41 +120,35 @@ const questions = [
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
 ];
-let questionElement = document.getElementById("title")
-questionElement.id = "title"
-let questionsNewArr = []
+const questionElement = document.getElementById("title");
+questionElement.id = "title";
+let questionsNewArr = [];
 for (let i = 0; i < questions.length; i++) {
   const elementC = questions[i].correct_answer;
-  const arr = new Array(elementC)
-  const elementW = questions[i].incorrect_answers
-  let push = arr.concat(elementW)
-  questionsNewArr.push(push)
+  const arr = new Array(elementC);
+  const elementW = questions[i].incorrect_answers;
+  let push = arr.concat(elementW);
+  questionsNewArr.push(push);
 }
-console.log(questionsNewArr);
+// console.log(questionsNewArr);
 
-function resetAnswer(){
-  
+function resetAnswer() {
+  while (questionButtons.firstChild) {
+    questionButtons.removeChild(questionButtons.firstChild);
+  }
 }
 
 // Text inside H1 and Buttons
-let nArray = 0
-let cycleQuiz = function(){
- questionElement.innerHTML = questions[nArray++].question
- questionsNewArr[nArray++].forEach(element => {
-   btn = document.createElement("button")
-  btn.innerText = element
-  btn.classList.add("buttons")
-  questionButtons.appendChild(btn)
-});
-questionButtons.addEventListener("click", nextButton,{once:true})
-}
-  cycleQuiz()
-
-
+let nArray = 0;
+let cycleQuiz = function () {
+  questionElement.innerHTML = questions[nArray].question;
+  questionsNewArr[nArray++].forEach((element) => {
+    btn = document.createElement("button");
+    btn.innerText = element;
+    btn.classList.add("buttons");
+    questionButtons.appendChild(btn);
+  });
   
-
-
-
-
-
-
+  questionButtons.addEventListener("click", nextButton, { once: true });
+};
+cycleQuiz();

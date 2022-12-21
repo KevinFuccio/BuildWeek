@@ -84,7 +84,7 @@
   #title {
     box-sizing: border-box;
     width: 40%;
-    margin-left: auto;
+    margin-left:  30%;;
     margin-right: auto;
     margin-top: 100px;
     font-weight: normal;
@@ -95,7 +95,7 @@
   #mainArgument {
     box-sizing: border-box;
     width: 60%;
-    margin-left: 26%;
+    margin-left: 28%;
     margin-top: 50px;
   }
   #mainArgument div {
