@@ -182,5 +182,5 @@ function lastAnswer(){
  newBtn.addEventListener('click', finalBtn )  
 }
 function finalBtn(e){
-  e.onclick = location.assign(`/result.html?giuste=${score}&max=10&sbagliate=${sbagliate}`)
+  e.onclick = location.assign(`/result.html?giuste=${score}&max=${questions.length}&sbagliate=${sbagliate}`)
 }
