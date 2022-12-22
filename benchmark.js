@@ -1,4 +1,4 @@
-let pag2 = new URLSearchParams(location1.search);
+let pag2 = new URLSearchParams(location.search);
 const questionElement = document.getElementById("title");
 questionElement.id = "title";                                   //
 let questionButtons = document.getElementById("mainArgument");
