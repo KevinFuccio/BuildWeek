@@ -1,0 +1,32 @@
+
+.header h1{
+    color: white;
+    text-align: center;
+    font-size: 2.8rem;
+   
+}
+.header p{
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+.btn{
+    
+    width: 20%;
+    text-align: center;
+    padding: 15px;
+    background: transparent;
+    color: white;
+    margin: auto;
+    margin-bottom: 75px;
+    border: 1px solid white;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px lightblue;
+  }
+circle{
+    fill: transparent;
+    stroke:#00ffff;
+    stroke-width: 45;
+  }
