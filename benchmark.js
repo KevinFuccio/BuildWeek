@@ -1,7 +1,7 @@
-let pag2 = new URLSearchParams(pagina2.search);
+let pag2 = new URLSearchParams(location.search);
 let pagCorrent = pag2.get("pagina2") ;
 const questionElement = document.getElementById("title");
-questionElement.id = "title";                                   //
+questionElement.id = "title";                                   
 let questionButtons = document.getElementById("mainArgument");
 
 //Button when an answer is clicked
