@@ -1,5 +1,5 @@
 const questionElement = document.getElementById("title");
-questionElement.id = "title";
+questionElement.id = "title";                                   //
 let questionButtons = document.getElementById("mainArgument");
 
 //Button when an answer is clicked
@@ -127,17 +127,17 @@ let score = 0
 
 let questionsNewArr = [];
 for (let i = 0; i < questions.length; i++) {
-  const elementC = questions[i].correct_answer;
-  const arr = new Array(elementC);
-  const elementW = questions[i].incorrect_answers;
-  let push = arr.concat(elementW);
+  const elementCorrect = questions[i].correct_answer;
+  const arr = new Array(elementCorrect);
+  const elementIncorrect = questions[i].incorrect_answers;
+  let push = arr.concat(elementIncorrect);
   questionsNewArr.push(push);
 }
-let risposteCorretteArr = []
+let correctAnswerArr = []
 for (let i = 0; i < questions.length; i++) {
   const element = questions[i].correct_answer;
   const arr = new Array(element)
-  risposteCorretteArr.push(arr)
+  correctAnswerArr.push(arr)
 }
 
 function resetAnswer() {
@@ -154,12 +154,18 @@ let cycleQuiz = function () {
     btn = document.createElement("button");
     btn.innerText = element;
     btn.classList.add("buttons");
+    btn.addEventListener("click",function(){
+      validation(this, nArray)
+    });
     questionButtons.appendChild(btn);
   });
-
-  
   questionButtons.addEventListener("click", nextButton, { once: true });
 };
+function validation(button,question){
+  if(correctAnswerArr[question -1] == button.innerText){
+    score++
+  }
+}
 cycleQuiz();
 function lastAnswer(){
  questionElement.innerHTML = "Quiz completato, premi 'risultato' per vedere il tuo punteggio!"
@@ -174,5 +180,5 @@ function lastAnswer(){
  newBtn.addEventListener('click', finalBtn )  
 }
 function finalBtn(e){
-  e.onclick = location.assign("/result.html?giuste=3")
+  e.onclick = location.assign(`/result.html?giuste=${score}`)
 }
