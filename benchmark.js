@@ -162,6 +162,7 @@ function lastAnswer(){
  let newBtn = document.createElement("button")
  newBtn.id= "finalBtn"
  questionButtons.appendChild(newBtn)
+ newBtn.onclick = location.assign("/result.html?giuste=3")
 
 
 }
