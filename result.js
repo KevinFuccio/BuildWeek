@@ -1,4 +1,4 @@
-// let params = new URLSearchParams(location.search);
+let params = new URLSearchParams(location.search);
 let pcorrect = params.get("giuste") ;
 let maxcorrect = params.get("max"); 
 let sbagliata = params.get("sbagliate")

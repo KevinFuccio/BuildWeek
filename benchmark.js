@@ -1,3 +1,4 @@
+let params = new URLSearchParams(location.search);
 const questionElement = document.getElementById("title");
 questionElement.id = "title";                                   //
 let questionButtons = document.getElementById("mainArgument");
