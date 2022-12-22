@@ -167,7 +167,7 @@ function validation(button,question){
   if(correctAnswerArr[question -1] == button.innerText){
     score++
   }else{
-    --sbagliate
+    sbagliate = score-1
   }
 }
 cycleQuiz();
