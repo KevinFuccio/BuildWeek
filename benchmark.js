@@ -126,7 +126,7 @@ const questions = [
   },
 ];
 let score = 0
-let sbagliate= 10
+let sbagliate = questions.length
 let questionsNewArr = [];
 for (let i = 0; i < questions.length; i++) {
   const elementCorrect = questions[i].correct_answer;
