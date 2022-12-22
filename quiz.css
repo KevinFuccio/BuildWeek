@@ -1,15 +1,13 @@
-#timer{
-    display: inline-block;
-    color: white;
-    font-size: 24px;
-    text-align: right;
-    margin-right: 50px;
-  }
+* , *::before, *::after{
+  box-sizing: border-box;
+}
+
   .buttons {
     display: inline-block;
     font-weight: bold;
     background-color: #ffffff25;
     color: #fff;
+    margin: 10px 10px 5px 10px;
     padding: 15px;
     min-height: 80px;
     font-size: 16px;
@@ -19,6 +17,7 @@
     border: none;
   }
   .buttons:hover {
+    cursor: pointer;
     transition-delay: 50ms;
     display: inline-block;
     border: none;
@@ -44,26 +43,56 @@
     border-radius: 52px;
     outline: none;
   }
-  .title {
+  #buttonGo{
+    height: 63px;
+    
+  }
+  #nextButton{
+    cursor: pointer;
+    float: right;
+    margin-right:15%;
+    font-weight: bold;
+    color: white;
+    background-color: #d20094;
+    border: none;
+    padding: 15px;
+    min-height: 62px;
+    font-size: 16px;
+    min-width: 130px;
+    vertical-align: top;
+    outline: none;
+  }
+  #nextButton:hover{
+    float: right;
+    font-weight: bold;
+    color: white;
+    background-color: #d20094;
+    border: none;
+    padding: 15px;
+    min-height: 62px;
+    font-size: 16px;
+    min-width: 130px;
+    vertical-align: top;
+    outline: none;
+  }
+  #title {
     box-sizing: border-box;
     width: 40%;
-    margin-left: auto;
+    margin-left:  30%;;
     margin-right: auto;
-    margin-top: 200px;
-  }
-  .title h1 {
-      font-weight: normal;
+    margin-top: 100px;
+    font-weight: normal;
     font-size: 60px;
     color: white;
     text-align: center;
   }
-  .mainArgument {
+  #mainArgument {
     box-sizing: border-box;
-    width: 70%;
-    margin-left: 26%;
+    width: 60%;
+    margin-left: 28%;
     margin-top: 50px;
   }
-  .mainArgument div {
+  #mainArgument div {
     display: inline-block;
     padding: 12px 24px 20px 24px;
   }
@@ -74,3 +103,18 @@
       color: #fff;
       margin-top: 50px;
   }
+  #finalBtn{
+    cursor: pointer;
+    margin-left: 31%;
+    font-weight: bold;
+    color: rgb(0, 39, 93);
+    background-color: #00f7ff;
+    border: none;
+    padding: 15px;
+    min-height: 62px;
+    font-size: 16px;
+    min-width: 130px;
+    vertical-align: top;
+    outline: none;
+  }
+  
