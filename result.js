@@ -1,2 +1,5 @@
 let params = new URLSearchParams(location.search);
-let primoParametro = params.get("giuste") || 8 ;
+let pcorrect = params.get("giuste") || 8 ;
+
+let resultato = document.getElementById("resultato");
+resultato.innerText = ` ${pcorrect}`;
