@@ -157,5 +157,5 @@ let cycleQuiz = function () {
 cycleQuiz();
 function lastAnswer(){
  questionElement.innerHTML = "FINITO"
- 
+
 }
