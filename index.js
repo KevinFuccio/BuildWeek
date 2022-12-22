@@ -12,5 +12,5 @@ checkbox.addEventListener('change', function() {
   });
   document.getElementById("myBtn").addEventListener('click',nextPage)
   function nextPage(btn){
-    btn = pagina2.assign(`/result.html?=pagina2`)
+    btn = location.assign(`/Quiz.html?=pagina2`)
   }
