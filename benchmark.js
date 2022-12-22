@@ -126,7 +126,7 @@ const questions = [
   },
 ];
 let score = 0
-let sbagliate= questions.length
+let sbagliate= 10
 let questionsNewArr = [];
 for (let i = 0; i < questions.length; i++) {
   const elementCorrect = questions[i].correct_answer;
@@ -167,7 +167,7 @@ function validation(button,question){
   if(correctAnswerArr[question -1] == button.innerText){
     score++
   }else{
-    sbagliate++
+    sbagliate--
   }
 }
 cycleQuiz();
