@@ -109,4 +109,18 @@
       color: #fff;
       margin-top: 50px;
   }
+  #finalBtn{
+    cursor: pointer;
+    margin-left: 31%;
+    font-weight: bold;
+    color: rgb(0, 39, 93);
+    background-color: #00f7ff;
+    border: none;
+    padding: 15px;
+    min-height: 62px;
+    font-size: 16px;
+    min-width: 130px;
+    vertical-align: top;
+    outline: none;
+  }
   

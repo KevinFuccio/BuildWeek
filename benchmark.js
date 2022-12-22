@@ -22,9 +22,9 @@ function countAndAnswer() {
 let quizCount = 1;
 let quizCounter = function () {
   document.querySelector("#questions").innerHTML = quizCount++;
-  if (quizCount >= 10) {
-    quizCount = 10;
+  if (quizCount >= 12) {
     lastAnswer()
+    quizCount = 10
   }
 };
 quizCounter();
@@ -157,5 +157,11 @@ let cycleQuiz = function () {
 cycleQuiz();
 function lastAnswer(){
  questionElement.innerHTML = "FINITO"
+ let btnRemove = document.getElementById("buttonGo")
+ btnRemove.parentNode.removeChild(btnRemove)
+ let newBtn = document.createElement("button")
+ newBtn.id= "finalBtn"
+ questionButtons.appendChild(newBtn)
+
 
 }
