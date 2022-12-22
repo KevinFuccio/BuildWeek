@@ -12,5 +12,5 @@ checkbox.addEventListener('change', function() {
   });
   document.getElementById("myBtn").addEventListener('click',nextPage)
   function nextPage(btn){
-    btn = location.assign(`/result.html?=pagina2`)
+    btn = location1.assign(`/result.html?=pagina2`)
   }
