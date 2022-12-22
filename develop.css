@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Outfit:wght@100;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;600&display=swap');
+
+body {
+    background-image: url(./bg.jpg);
+    background-size: cover;
+    height: 100%;
+    color: white;
+
+}
+
+header {
+    margin: 0 auto;
+	max-width:800px;
+    padding: 20px;
+    margin-bottom: -40px;
+}
+
+main {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    margin: 0 auto;
+    max-width: 800px;
+    padding-left: 30px;
+    
+}
+
+
+h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 60px;
+    margin: 40px 40px 40px 15px
+}
+
+h1 span {
+    font-weight: bold;
+}
+
+.logo {
+    width: 15%;
+    padding: 15px 0px 0px 15px;
+}
+
+.title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 60px;
+    line-height: 50px;
+    font-weight: 200;
+    margin-top: 80px;
+}
+
+body span {
+    font-weight: bold;
+
+}
+
+.lista{
+margin-top: 40px;
+}
+.footer {
+    margin: 40px 40px 40px 0px
+}
+
+h2 {
+    font-family: 'Outfit', sans-serif;
+    color: #bf055b;
+    font-size: 30px;
+}
+.checkbox{
+    margin-top: 30px;
+}
+.generalButton {
+    font-weight: bold;
+    background-color: #bf055b;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    min-height: 60px;
+    font-size: 20px;
+    min-width: 240px;
+    margin-right: 15px;
+    float: right;
+    
+
+}
+
+.generalButton:hover {
+    font-weight: bold;
+    background-color: #00e5ff;
+    color: rgb(0, 31, 81);
+    border: none;
+    padding: 15px;
+    min-height: 60px;
+    font-size: 20px;
+    min-width: 240px;
+    box-shadow: 0px 0px 24px aqua
+}

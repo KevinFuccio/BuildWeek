@@ -1,13 +1,7 @@
 * , *::before, *::after{
   box-sizing: border-box;
 }
-/* #timer{
-    color: white;
-    font-size: 24px;
-    text-align: right;
-    margin-right: 50px;
-    height: 30px;
-  } */
+
   .buttons {
     display: inline-block;
     font-weight: bold;
