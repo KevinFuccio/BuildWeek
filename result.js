@@ -11,7 +11,7 @@ risultatoSbagliato.innerText = `${(sbagliata / maxcorrect) *100}%`
 let totalQuestionsWrong = document.getElementById("totalQuestionsWrong")
 totalQuestionsWrong.innerText= `${sbagliata}/${maxcorrect} Questions`
 
-document.querySelector(".Btn").addEventListener('click',nextPage)
+document.querySelector(".btn").addEventListener('click',nextPage)
   function nextPage(btn){
     btn = location.assign(`/feedback.html?=pagina4`)
   }
