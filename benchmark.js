@@ -24,7 +24,7 @@ let quizCounter = function () {
   document.querySelector("#questions").innerHTML = quizCount++;
   if (quizCount >= 12) {
     lastAnswer()
-    quizCount = 10
+  
   }
 };
 quizCounter();
@@ -123,7 +123,7 @@ const questions = [
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
 ];
-
+let score = 0
 
 let questionsNewArr = [];
 for (let i = 0; i < questions.length; i++) {
@@ -133,7 +133,12 @@ for (let i = 0; i < questions.length; i++) {
   let push = arr.concat(elementW);
   questionsNewArr.push(push);
 }
-// console.log(questionsNewArr);
+let risposteCorretteArr = []
+for (let i = 0; i < questions.length; i++) {
+  const element = questions[i].correct_answer;
+  const arr = new Array(element)
+  risposteCorretteArr.push(arr)
+}
 
 function resetAnswer() {
   while (questionButtons.firstChild) {
@@ -151,18 +156,23 @@ let cycleQuiz = function () {
     btn.classList.add("buttons");
     questionButtons.appendChild(btn);
   });
+
   
   questionButtons.addEventListener("click", nextButton, { once: true });
 };
 cycleQuiz();
 function lastAnswer(){
- questionElement.innerHTML = "FINITO"
+ questionElement.innerHTML = "Quiz completato, premi 'risultato' per vedere il tuo punteggio!"
+ let counter = document.querySelector(".foot")
+ counter.parentNode.removeChild(counter)
  let btnRemove = document.getElementById("buttonGo")
  btnRemove.parentNode.removeChild(btnRemove)
  let newBtn = document.createElement("button")
+ newBtn.innerText ="RISULTATO"
  newBtn.id= "finalBtn"
  questionButtons.appendChild(newBtn)
- newBtn.onclick = location.assign("/result.html?giuste=3")
-
-
+ newBtn.addEventListener('click', finalBtn )  
+}
+function finalBtn(e){
+  e.onclick = location.assign("/result.html?giuste=3")
 }
