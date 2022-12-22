@@ -6,6 +6,7 @@ body {
     background-size: cover;
     height: 100%;
     color: white;
+    
 
 }
 
@@ -101,6 +102,7 @@ h2 {
     min-width: 240px;
     margin-right: 15px;
     float: right;
+    cursor: pointer;
     
 
 }
@@ -114,7 +116,8 @@ h2 {
     min-height: 60px;
     font-size: 15px;
     min-width: 240px;
-    box-shadow: 0px 0px 24px aqua
+    box-shadow: 0px 0px 24px aqua;
+    cursor: pointer;
 }
 .generalButton:disabled, .generalButton:disabled:hover{
     font-weight: bold;
@@ -128,5 +131,6 @@ h2 {
     margin-right: 15px;
     float: right;
     box-shadow: unset;
+    cursor: pointer;
     
     }
