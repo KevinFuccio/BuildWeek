@@ -7,6 +7,6 @@ resultato.innerText =  `${(pcorrect / maxcorrect) *100}%`;
 let risultatoQuestion = document.getElementById("totalQuestions")
 risultatoQuestion.innerText= `${pcorrect}/${maxcorrect} Questions`
 let risultatoSbagliato = document.getElementById("risSbagliato")
-risultatoSbagliato.innerText = `${(sbagliata * maxcorrect) /100}%`
+risultatoSbagliato.innerText = `${(sbagliata * maxcorrect) *100}%`
 let totalQuestionsWrong = document.getElementById("totalQuestionsWrong")
 totalQuestionsWrong.innerText= `${sbagliata}/${maxcorrect} Questions`
