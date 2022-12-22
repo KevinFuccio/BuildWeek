@@ -126,7 +126,7 @@ const questions = [
   },
 ];
 let score = 0
-let sbagliate= questions.length
+let sbagliata= questions.length
 let questionsNewArr = [];
 for (let i = 0; i < questions.length; i++) {
   const elementCorrect = questions[i].correct_answer;
@@ -167,7 +167,7 @@ function validation(button,question){
   if(correctAnswerArr[question -1] == button.innerText){
     score++
   }else{
-    sbagliate--
+    sbagliata--
   }
 }
 cycleQuiz();
@@ -184,5 +184,5 @@ function lastAnswer(){
  newBtn.addEventListener('click', finalBtn )  
 }
 function finalBtn(e){
-  e.onclick = location.assign(`/result.html?giuste=${score}&max=${questions.length}&sbagliate=${sbagliate}`)
+  e.onclick = location.assign(`/result.html?giuste=${score}&max=${questions.length}&sbagliate=${sbagliata}`)
 }
