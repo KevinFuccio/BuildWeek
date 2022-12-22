@@ -1,4 +1,4 @@
-let pag2 = new URLSearchParams(location.search);
+let pag2 = new URLSearchParams(pagina2.search);
 let pagCorrent = pag2.get("pagina2") ;
 const questionElement = document.getElementById("title");
 questionElement.id = "title";                                   //
