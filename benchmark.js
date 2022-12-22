@@ -1,5 +1,7 @@
+let pag2 = new URLSearchParams(location.search);
+let pagCorrent = pag2.get("pagina2") ;
 const questionElement = document.getElementById("title");
-questionElement.id = "title";
+questionElement.id = "title";                                   
 let questionButtons = document.getElementById("mainArgument");
 
 //Button when an answer is clicked
@@ -24,7 +26,7 @@ let quizCounter = function () {
   document.querySelector("#questions").innerHTML = quizCount++;
   if (quizCount >= 12) {
     lastAnswer()
-    quizCount = 10
+  
   }
 };
 quizCounter();
@@ -123,17 +125,22 @@ const questions = [
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
 ];
-
-
+let score = 0
+let sbagliate= questions.length
 let questionsNewArr = [];
 for (let i = 0; i < questions.length; i++) {
-  const elementC = questions[i].correct_answer;
-  const arr = new Array(elementC);
-  const elementW = questions[i].incorrect_answers;
-  let push = arr.concat(elementW);
+  const elementCorrect = questions[i].correct_answer;
+  const arr = new Array(elementCorrect);
+  const elementIncorrect = questions[i].incorrect_answers;
+  let push = arr.concat(elementIncorrect);
   questionsNewArr.push(push);
 }
-// console.log(questionsNewArr);
+let correctAnswerArr = []
+for (let i = 0; i < questions.length; i++) {
+  const element = questions[i].correct_answer;
+  const arr = new Array(element)
+  correctAnswerArr.push(arr)
+}
 
 function resetAnswer() {
   while (questionButtons.firstChild) {
@@ -149,20 +156,33 @@ let cycleQuiz = function () {
     btn = document.createElement("button");
     btn.innerText = element;
     btn.classList.add("buttons");
+    btn.addEventListener("click",function(){
+      validation(this, nArray)
+    });
     questionButtons.appendChild(btn);
   });
-  
   questionButtons.addEventListener("click", nextButton, { once: true });
 };
+function validation(button,question){
+  if(correctAnswerArr[question -1] == button.innerText){
+    score++
+  }else{
+    sbagliate--
+  }
+}
 cycleQuiz();
 function lastAnswer(){
- questionElement.innerHTML = "FINITO"
+ questionElement.innerHTML = "Quiz completato, premi 'risultato' per vedere il tuo punteggio!"
+ let counter = document.querySelector(".foot")
+ counter.parentNode.removeChild(counter)
  let btnRemove = document.getElementById("buttonGo")
  btnRemove.parentNode.removeChild(btnRemove)
  let newBtn = document.createElement("button")
+ newBtn.innerText ="RISULTATO"
  newBtn.id= "finalBtn"
  questionButtons.appendChild(newBtn)
- newBtn.onclick = location.assign("/result.html?giuste=3")
-
-
+ newBtn.addEventListener('click', finalBtn )  
+}
+function finalBtn(e){
+  e.onclick = location.assign(`/result.html?giuste=${score}&max=${questions.length}&sbagliate=${sbagliate}`)
 }

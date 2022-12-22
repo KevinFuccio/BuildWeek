@@ -10,4 +10,7 @@ checkbox.addEventListener('change', function() {
       document.getElementById("myBtn").disabled = true;
     }
   });
-  
+  document.getElementById("myBtn").addEventListener('click',nextPage)
+  function nextPage(btn){
+    btn = location.assign(`/Quiz.html?=pagina2`)
+  }

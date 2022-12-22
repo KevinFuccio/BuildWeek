@@ -1,3 +1,5 @@
+let pag4 = new URLSearchParams(location.search);
+let pagcorr = pag4.get("pagina4") ;
 const validate = () => {
   const button = document.getElementById("button");
   const text = document.getElementById("text");
