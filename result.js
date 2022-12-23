@@ -31,8 +31,7 @@ if(pcorrect > 5){
   content.appendChild(h3)
   content.appendChild(span)
 }
-let myAudio = document.querySelector('#audio')
-myAudio.play()
+
 
 
 
