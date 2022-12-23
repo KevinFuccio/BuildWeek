@@ -18,7 +18,6 @@ function countAndAnswer() {
   resetAnswer();
   quizCounter();
   cycleQuiz();
-  validation();
 }
 
 //Counter for the quitz
