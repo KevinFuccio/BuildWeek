@@ -12,7 +12,7 @@ let nextButton = function () {
   button.textContent = "NEXT";
   selector.appendChild(button);
   button.addEventListener("click", countAndAnswer);
-  nextButton = () => {}
+  // nextButton = () => {}
   ;
 };
 function countAndAnswer() {
@@ -148,7 +148,9 @@ for (let i = 0; i < questions.length; i++) {
 function resetAnswer() {
   while (questionButtons.firstChild) {
     questionButtons.removeChild(questionButtons.firstChild);
+    
   }
+  document.getElementById("buttonGo").removeChild(document.getElementById("buttonGo").firstChild)
 }
 
 // Text inside H1 and Buttons
