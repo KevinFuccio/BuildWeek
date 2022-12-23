@@ -8,7 +8,7 @@ body {
     color: white;
     height: 100vh;
     width: 100vw;
-    vertical-align: bottom;
+   
 
 }
 
@@ -79,6 +79,7 @@ h2 {
     appearance: none;
     border: solid 1px;
     border-color: white;
+    vertical-align: bottom;
      
 }
 
