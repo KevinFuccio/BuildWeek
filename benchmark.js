@@ -160,7 +160,7 @@ let cycleQuiz = function () {
     btn.addEventListener("click",function(){
       validation(this, nArray)
       
-    },{ once: true });
+    });
     questionButtons.appendChild(btn);
   });
   questionButtons.addEventListener("click", nextButton, { once: true });
