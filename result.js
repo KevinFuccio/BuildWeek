@@ -31,8 +31,8 @@ if(pcorrect > 5){
   content.appendChild(h3)
   content.appendChild(span)
 }
-let audio = new Audio('./immagini/lol.mp3 ');
-audio.play();
+let myAudio = document.querySelector('#audio')
+myAudio.play()
 
 
 
