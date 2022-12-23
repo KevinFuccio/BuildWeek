@@ -169,7 +169,7 @@ let cycleQuiz = function () {
 };
 function validation(button,question){
   if(correctAnswerArr[question -1] == button.innerText){
-    score++ ;{once:true}
+    score++
   }
   else{
     sbagliate++
