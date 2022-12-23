@@ -1,7 +1,7 @@
 let pag2 = new URLSearchParams(location.search);
-let pagCorrent = pag2.get("pagina2") ;
+let pagCorrent = pag2.get("pagina2");
 const questionElement = document.getElementById("title");
-questionElement.id = "title";                                   
+questionElement.id = "title";
 let questionButtons = document.getElementById("mainArgument");
 
 //Button when an answer is clicked
@@ -13,13 +13,11 @@ let nextButton = function () {
   selector.appendChild(button);
   button.addEventListener("click", countAndAnswer);
   // nextButton = () => {}
-  ;
 };
 function countAndAnswer() {
   resetAnswer();
   quizCounter();
   cycleQuiz();
-  
 }
 
 //Counter for the quitz
@@ -27,8 +25,7 @@ let quizCount = 1;
 let quizCounter = function () {
   document.querySelector("#questions").innerHTML = quizCount++;
   if (quizCount >= 12) {
-    lastAnswer()
-  
+    lastAnswer();
   }
 };
 quizCounter();
@@ -127,7 +124,7 @@ const questions = [
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
 ];
-let score = 0
+let score = 0;
 let sbagliate = 0;
 
 let questionsNewArr = [];
@@ -138,19 +135,20 @@ for (let i = 0; i < questions.length; i++) {
   let push = arr.concat(elementIncorrect);
   questionsNewArr.push(push);
 }
-let correctAnswerArr = []
+let correctAnswerArr = [];
 for (let i = 0; i < questions.length; i++) {
   const element = questions[i].correct_answer;
-  const arr = new Array(element)
-  correctAnswerArr.push(arr)
+  const arr = new Array(element);
+  correctAnswerArr.push(arr);
 }
 
 function resetAnswer() {
   while (questionButtons.firstChild) {
     questionButtons.removeChild(questionButtons.firstChild);
-    
   }
-  document.getElementById("buttonGo").removeChild(document.getElementById("buttonGo").firstChild)
+  document
+    .getElementById("buttonGo")
+    .removeChild(document.getElementById("buttonGo").firstChild);
 }
 
 // Text inside H1 and Buttons
@@ -161,37 +159,37 @@ let cycleQuiz = function () {
     btn = document.createElement("button");
     btn.innerText = element;
     btn.classList.add("buttons");
-    btn.addEventListener("click",function(){
-      validation(this, nArray)
-      
+    btn.addEventListener("click", function () {
+      validation(this, nArray);
     });
     questionButtons.appendChild(btn);
   });
   questionButtons.addEventListener("click", nextButton, { once: true });
 };
-function validation(button,question){
-  if(correctAnswerArr[question -1] == button.innerText){
-    score++
-  }
-  else{
-    sbagliate++
+function validation(button, question) {
+  if (correctAnswerArr[question - 1] == button.innerText) {
+    score++;
+  } else {
+    sbagliate++;
   }
 }
-
 
 cycleQuiz();
-function lastAnswer(){
- questionElement.innerHTML = "Quiz completato, premi 'risultato' per vedere il tuo punteggio!"
- let counter = document.querySelector(".foot")
- counter.parentNode.removeChild(counter)
- let btnRemove = document.getElementById("buttonGo")
- btnRemove.parentNode.removeChild(btnRemove)
- let newBtn = document.createElement("button")
- newBtn.innerText ="RISULTATO"
- newBtn.id= "finalBtn"
- questionButtons.appendChild(newBtn)
- newBtn.addEventListener('click', finalBtn )  
+function lastAnswer() {
+  questionElement.innerHTML =
+    "Quiz completato, premi 'risultato' per vedere il tuo punteggio!";
+  let counter = document.querySelector(".foot");
+  counter.parentNode.removeChild(counter);
+  let btnRemove = document.getElementById("buttonGo");
+  btnRemove.parentNode.removeChild(btnRemove);
+  let newBtn = document.createElement("button");
+  newBtn.innerText = "RISULTATO";
+  newBtn.id = "finalBtn";
+  questionButtons.appendChild(newBtn);
+  newBtn.addEventListener("click", finalBtn);
 }
-function finalBtn(e){
-  e.onclick = location.assign(`/result.html?giuste=${score}&max=${questions.length}&sbagliate=${sbagliate}`)
+function finalBtn(e) {
+  e.onclick = location.assign(
+    `/result.html?giuste=${score}&max=${questions.length}&sbagliate=${sbagliate}`
+  );
 }
