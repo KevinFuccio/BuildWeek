@@ -157,8 +157,9 @@ let cycleQuiz = function () {
     btn = document.createElement("button");
     btn.innerText = element;
     btn.classList.add("buttons");
-    btn.addEventListener("click",function(){
+    btn.addEventListener("click",{ once: true },function(){
       validation(this, nArray)
+      
     });
     questionButtons.appendChild(btn);
   });
