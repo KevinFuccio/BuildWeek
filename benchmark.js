@@ -168,12 +168,12 @@ let cycleQuiz = function () {
 function validation(button,question){
   if(correctAnswerArr[question -1] == button.innerText){
     score++
-  }else if(score++){
-    sbagliate--
-  }else{
+  }
+  else{
     sbagliate++
   }
 }
+
 cycleQuiz();
 function lastAnswer(){
  questionElement.innerHTML = "Quiz completato, premi 'risultato' per vedere il tuo punteggio!"
