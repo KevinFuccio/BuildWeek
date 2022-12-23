@@ -25,6 +25,7 @@
     box-shadow: 1px 1px 10px lightblue;
   }
 .hero{
+  margin-right: 1%;
   display: flex;
   align-items: center;
   justify-content: center;
