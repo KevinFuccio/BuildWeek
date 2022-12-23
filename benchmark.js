@@ -126,7 +126,7 @@ const questions = [
   },
 ];
 let score = 0
-let sbagliate = questions.length;
+let sbagliate = questions.length+1;
 
 let questionsNewArr = [];
 for (let i = 0; i < questions.length; i++) {
