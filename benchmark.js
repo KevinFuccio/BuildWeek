@@ -175,7 +175,7 @@ function validation(button,question){
     sbagliate++
   }
 }
-if(score === questions.length){
+if(score > questions.length){
   score = questions.length
 }
 
