@@ -12,12 +12,14 @@ let nextButton = function () {
   button.textContent = "NEXT";
   selector.appendChild(button);
   button.addEventListener("click", countAndAnswer);
-  nextButton = () => {};
+  nextButton = () => {}
+  ;
 };
 function countAndAnswer() {
   resetAnswer();
   quizCounter();
   cycleQuiz();
+  
 }
 
 //Counter for the quitz
@@ -167,7 +169,7 @@ let cycleQuiz = function () {
 };
 function validation(button,question){
   if(correctAnswerArr[question -1] == button.innerText){
-    score++
+    score++ ;{once:true}
   }
   else{
     sbagliate++
