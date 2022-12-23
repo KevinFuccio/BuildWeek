@@ -175,9 +175,7 @@ function validation(button,question){
     sbagliate++
   }
 }
-if(score > questions.length){
-  score = questions.length
-}
+
 
 cycleQuiz();
 function lastAnswer(){
