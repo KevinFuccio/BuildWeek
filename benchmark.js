@@ -126,7 +126,7 @@ const questions = [
   },
 ];
 let score = 0
-let sbagliate = questions.length+1;
+let sbagliate = 0;
 
 let questionsNewArr = [];
 for (let i = 0; i < questions.length; i++) {
@@ -170,7 +170,7 @@ function validation(button,question){
     score++
   }
   else{
-    sbagliate--
+    sbagliate++
   }
 }
 
