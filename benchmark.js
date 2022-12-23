@@ -18,6 +18,7 @@ function countAndAnswer() {
   resetAnswer();
   quizCounter();
   cycleQuiz();
+  validation();
 }
 
 //Counter for the quitz
@@ -126,7 +127,7 @@ const questions = [
   },
 ];
 let score = 0
-let sbagliate = questions.length;
+let sbagliate = 0;
 
 let questionsNewArr = [];
 for (let i = 0; i < questions.length; i++) {
@@ -167,8 +168,10 @@ let cycleQuiz = function () {
 function validation(button,question){
   if(correctAnswerArr[question -1] == button.innerText){
     score++
-  }else{
+  }else if(score++){
     sbagliate--
+  }else{
+    sbagliate++
   }
 }
 cycleQuiz();
